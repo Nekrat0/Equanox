@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+    <title>Equanox</title>
+	<link
+href="https://fonts.googleapis.com/css2?family=Orbitron&family=Roboto&display=swap"
+		  rel="stylesheet">
+	<style>
+		/* Style global */
+		body {
+			margin: 0;
+			padding: 0;
+			background: linear-gradient(135deg, #0a0a0a, #1a1a2e);
+			color: #d3d3d3;
+			font-family: 'Roboto', "sans-serif";
+			overflow-x: hidden;
+		}
+		/* Fond animé avec effets de vagues */
+		.background {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			backgroud:
+radial-gradient(circle, #00ffff 2px, transparent 2px);
+			background-size: 50px 50px;
+			animation: wave 15s linear infinite alternate;
+			z-index: -1;
+		}
+		
+		@keyframes wave {
+			0% { transform: scale(1) rotate(0deg); opacity: 0.5; }
+			50% { transform: scale(1.2) rotate(180deg); opacity: 0.7; }
+			100% { transform: scale(1) rotate(360deg); opacity: 0.5; }
+		}
+		
+		/* En-tete avec logo et menu */
+		header {
+			display: flex;
+			justify-content: space-between;
+			padding: 20px;
+			position: absolute;
+			width: 100%;
+			top: 0;
+			z-index: 10;
+		}
+		
+		header h1 {
+			font-family: 'Orbitron', sans-serif;
+			color: #00ffff;
+			text-shadow: 0 0 20px #00ffff;
+		}
+		
+		nav {
+			display: flex;
+			gap: 30px;
+		}
+		
+		nav a {
+			text-decoration: none;
+			color: #6a0dad;
+			font-weight: bold;
+			transition: all 0.3s ease;
+		}
+		
+		nav a:hover {
+			color: #00ffff;
+			text-shadow: 0 0 10px #00ffff;
+		}
+		
+		/* Section principale */
+		.hero {
+			text-align: center;
+			padding: 100px 20px;
+			color: #fff;
+		}
+		
+		.hero h2 {
+			font-family: 'Orbitron', sans-serif;
+			font-size: 50px;
+			text-shadow: 0 0 20px #00ffff;
+			animation: neon-flicker 3s infinite alternate;
+		}
+		
+		@keyframes neon-flicker {
+			0%, 100% { text-shadow: 0 0 20px #00ffff, 0 0 30px #6a0dad; opacity: 1; }
+			50% { text-shadow: 0 0 5px #00ffff; opacity: 0.8; }
+		}
+		
+		.hero p {
+			font-size: 20px;
+			margin: 20px auto;
+			max-width: 800px;
+		}
+		
+		.button {
+			background: transparent;
+			border: 2px solid #00ffff;
+			color: #00ffff;
+			padding: 10px 30px;
+			font-size; 16px;
+			cursor: pointer;
+			transition: 0.3s;
+			margin-top: 30px;
+		}
+		
+		.button:hover {
+			background: #00ffff;
+			color: #0a0a0a;
+			box-shadow: 0 0 20px #00ffff;
+		}
+		
+		/* Section à propos */
+		.about {
+			text-align; center;
+			padding: 50px 20px;
+			background: #111;
+		}
+		
+		.about h3 {
+			font-size: 40px;
+			color: #00ffff;
+			margin-bottom: 20px;
+		}
+		
+		.about p {
+			font-size: 18px;
+			max-width: 800px;
+			margin: 0 auto;
+		}
+		
+		/* Section de contact */
+		.conctat {
+			text-align: center;
+			padding: 50px 20px;
+			background: #0a0a0a;
+		}
+		
+		.contact h3 {
+			font-size: 40px;
+			color: #00ffff;
+			margin-bottom: 20px;
+		}
+		
+		.contact p {
+			font-size: 18px;
+			color: #fff;
+			margin: 0 auto;
+			max-width: 600px;
+		}
+		
+		/* Footer */
+		footer {
+			text-align: center;
+			padding: 20px;
+			background: #111;
+			color: #fff;
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+		}
+	</style>
+</head>
+<body>
+	<div class="background"></div>
+	
+	<!-- En-tete -->
+	<header>
+		<h1>Equanox</h1>
+		<nav>
+			<a href="#">Accueille</a>
+			<a href="#">A propos</a>
+			<a href="#">Recherches</a>
+			<a href="#">Contact</a>
+		</nav>
+	</header>
+	
+	<!-- Section principale -->
+	<section class="hero">
+		<h2>Explorez le futur.
+Découvrez Equanox.</h2>
+		<p>Un projet ambitieux qui repousse les frontiers de la technologie et de le perseption humaine.
+Un voyage qui vous connecte à l'imaginaire.</p>
+		<button class="button" onclick="window.location.href='#'">Rejoindre le projet</button>
+	</section>
+	
+	<!-- Section à propos -->
+	<section class="about">
+		<h3>A propos d'Equanox</h3>
+		<p>Equanox est un projet révolutionnaire visant à explorer et exploiter les capacités humaines à travers des technologies avancées. Nous repoussons les limites de ce que vous croyiez possible.</p>
+	</section>
+	
+	<!-- Section contact -->
+	<section class="contact">
+		<h3>Contactez-nous</h3>
+		<p>Pour plus d'information, contactez-nous via notre formulaire ou rejoignez-nous sur nos réseaux sociaux. Ensemble, façonons l'avenir.</p>
+	</section>
+	
+	<!-- Footer -->
+	<footer>
+		<p>&copy; 2025 Projet Equanox. Tous droits réservés.</p>
+	</footer>
+	
+	<!-- Effet sonore pour l'interaction -->
+	<audio id="click-sound"
+src="https://www.myinstants.com/media/sounds/button-click.mp3"></audio>
+	
+	<script>
+		// Son lors du clic
+		function playClickSound() {
+			const clickSound = document.getElementById('click-sound');
+			clickSound.currentTime = 0;
+			clickSound.play();
+		}
+		
+		// Applique l'effet sonore au bouton
+		
+document.querySelector('.button').addEventListener('click', playClickSound);
+	</script>
+</body>
+</html>
