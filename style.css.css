@@ -1,0 +1,170 @@
+@charset "utf-8";
+/* Style de base */
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: #ffffff;
+	color: #000;
+}
+
+/* HEADER */
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px;
+	background-color: #f9d342;
+}
+.logo img {
+	height: 100px;
+	size: 10%;
+}
+nav ul {
+	list-style: none;
+	display: flex;
+}
+nav ul li {
+	margin: 0 15px;
+}
+nav ul li a {
+	color: #000;
+	text-decoration: none;
+}
+
+/* HERO */
+#hero {
+	background-color: #000000;
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	color: #fff;
+}
+.hero-content {
+	background: rgba(0, 0, 0, 0.6);
+	padding: 20px;
+}
+.btn {
+	display: inline-block;
+	margin-top: 10px;
+	padding: 10px 20px;
+	background-color: #f9d342;
+	color: #000;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+/* PORTFOLIO */
+.gallery {
+	display: flex;
+	justify-content: left;
+	gap: 20px;
+}
+.work {
+	height: 100vh;
+	width: 100%;
+	display: flex; 
+	align-content: center;
+	justify-content: center;
+	background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+	overflow: hidden;
+	padding: 0;
+}
+
+.work iframe {
+	width: 100%;
+	height: 100%;
+}
+
+/* SERVICES */
+
+.services-list {
+	background-color: #f9d342;
+	display: flex;
+	justify-content: spacz-around;
+	margin: 0px;
+}
+.services {
+	text-align: left;
+	padding: 20px;
+	border: 0px solid #000;
+	border-radius: 10px;
+	
+}
+
+/* CONTACT */
+.contact {
+}
+form {
+	background-color: #f9d342;
+	heigth: 100%;
+	display: flex;
+	flex-direction: center;
+	width: 100%;
+	margin: auto;
+}
+form input, form textarea {
+	margin: 10px 0;
+	padding: 10px;
+}
+form button {
+	background-color: #f9d342;
+	border: none;
+	padding: 10px;
+	font-weight: bold;
+}
+
+/* FOOTER */
+footer {
+	text-align: center;
+	background: #000;
+	color: #fff;
+	padding: 20px;
+}
+
+/* == responsive === */
+@media screen and (max-width: 1200px) {
+	nav ul {
+		flex-direction: column;
+		gap: 1rem;
+	}
+	
+	.logo {
+		font-size: 1.5rem;
+	
+	}
+	
+	.work {
+		padding: 2rem;
+	}
+	
+	section {
+		padding: 2rem;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.navbar {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	
+	.logo {
+		font-size: 0.5rem;
+	}
+	
+	.work {
+		padding: 1rem;
+	}
+	
+	.form {
+		direction-flex: column;
+	}
+	
+	.section{
+		padding: 1rem;
+	}
+}
